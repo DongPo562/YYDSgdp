@@ -5,17 +5,22 @@ import FormatText from './components/FormatText.vue'
 import TipText from './components/TipText.vue'
 import ImageDisplay from './components/ImageDisplay.vue'
 
-const input = ref('')
+const clipboardInput = ref('')
+const tipText = ref('')
+
+const updateText = (text: string) => {
+  clipboardInput.value = text
+}
 </script>
 
 <template>
   <div class="main-container">
     <div class="main-left-container">
-      <ActionButtons />
-      <FormatText :text="input" />
+      <ActionButtons @update-text="updateText" />
+      <FormatText :text="clipboardInput" />
     </div>
     <div class="main-right-container">
-      <TipText :text="input" />
+      <TipText :text="tipText" />
       <ImageDisplay />
     </div>
   </div>

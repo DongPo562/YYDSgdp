@@ -1,6 +1,21 @@
+<script setup lang="ts">
+import { defineEmits } from 'vue'
+
+const emit = defineEmits(['updateText'])
+
+const handlePaste = async () => {
+  try {
+    const text = await navigator.clipboard.readText()
+    emit('updateText', text)
+  } catch (err) {
+    console.error('读取剪贴板失败:', err)
+  }
+}
+</script>
+
 <template>
   <div class="main-left-button-container">
-    <el-button type="primary" class="action-button">粘贴</el-button>
+    <el-button type="primary" class="action-button" @click="handlePaste">粘贴</el-button>
     <el-button type="primary" class="action-button">记录</el-button>
     <el-button type="primary" class="action-button">模式1</el-button>
     <el-button type="primary" class="action-button">听听看</el-button>
