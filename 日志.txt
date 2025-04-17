@@ -1,0 +1,37 @@
+2025-4-15
+
+1.项目根目录：pnpm create vite . --template vue-ts
+
+2.pnpm install
+
+3.pnpm add -D vite-plugin-pwa
+
+4.在vite.config.ts配置pwa
+
+5.pnpm add element-plus
+
+pnpm add @element-plus/icons-vue   //安装图标库，可选，还未安装
+
+2025-4-16
+
+pnpm add -D vitest @vitejs/plugin-vue @vitest/ui happy-dom
+the installed content:
+vitest@3.1.1
+
+@vitest/ui@3.1.1
+
+happy-dom@17.4.4
+
+@vitejs/plugin-vue
+
+安装：
+pnpm add -D vitest
+
+pnpm add -D @vue/test-utils
+
+运行 vitest
+pnpm vitest --ui
+运行所有测试：
+pnpm vitest run
+监听模式（开发时常用）：
+pnpm vitest watch
