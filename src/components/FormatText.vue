@@ -1,12 +1,13 @@
 <script setup lang="ts">
+import natural from 'natural';
 defineProps<{
-  text: string
+  clipboardText: string
 }>()
 </script>
 
 <template>
   <div class="main-left-text-container">
-    <el-text class="format-text">{{ text }}</el-text>
+    <div class="format-text">{{ clipboardText }}</div>
   </div>
 </template>
 
