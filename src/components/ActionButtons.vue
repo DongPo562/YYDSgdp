@@ -3,11 +3,11 @@ import { defineEmits } from 'vue'
 
 const emit = defineEmits(['updateText'])
 
-const handlePaste = async () => {
+const handlePaste = async (): Promise<void> => {
   try {
-    const text = await navigator.clipboard.readText()
-    emit('updateText', text)
-  } catch (err) {
+    const txt: string = await navigator.clipboard.readText()
+    emit('updateText', txt)
+  } catch (err: unknown) { // 将 err 的类型明确为 unknown
     console.error('读取剪贴板失败:', err)
   }
 }
@@ -44,4 +44,4 @@ const handlePaste = async () => {
   font-weight: bold;
   flex: 1;
 }
-</style> 
+</style>

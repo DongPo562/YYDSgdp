@@ -35,3 +35,27 @@ pnpm vitest --ui
 pnpm vitest run
 监听模式（开发时常用）：
 pnpm vitest watch
+
+
+2025-4-17
+pnpm add natural
+natural 8.0.1    依赖项（如 wordnet-db 和 sylvester）自动下载
+pnpm add --save-dev @types/natural         //开发时用的natural 库的 类型定义文件
+已安装natural库，以及natural库的类型定义文件（针对TypeScript）
+
+2025-4-18
+const articleSentences = [
+  { sentence: "The sun shines brightly in the blue sky.", sentenceID: 1 },
+  { sentence: "Birds sing happily on the green trees.", sentenceID: 2 },
+  { sentence: "People walk in the park, enjoying the warm weather.", sentenceID: 3 }
+];
+
+const articleWords = [
+{ word: "The", sentenceID: 1, wordID: 1 },
+{ word: "sun", sentenceID: 1, wordID: 2 },
+{ word: "shines", sentenceID: 1, wordID: 3 },
+{ word: "brightly", sentenceID: 1, wordID: 4 },
+{ word: "Birds", sentenceID: 2, wordID: 5 },
+{ word: "sing", sentenceID: 2, wordID: 6 },
+{ word: "happily", sentenceID: 2, wordID: 7 }
+];
